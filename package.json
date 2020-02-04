@@ -1,0 +1,28 @@
+{
+  "name": "nodejs-note-app",
+  "version": "1.0.0",
+  "description": "note app made purely with node js",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/appyofficial/NodeJS-Note-app.git"
+  },
+  "keywords": [
+    "note",
+    "app",
+    "node",
+    "js"
+  ],
+  "author": "appysharma.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/appyofficial/NodeJS-Note-app/issues"
+  },
+  "homepage": "https://github.com/appyofficial/NodeJS-Note-app#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
