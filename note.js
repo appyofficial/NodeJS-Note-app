@@ -46,7 +46,7 @@ const loadNotes = () => {
     }
 }
 
-//remove notes
+//removing notes
 const removeNotes = title => {
     const notes = loadNotes();
     const notesToKeep = notes.filter(note => {
@@ -61,5 +61,18 @@ const removeNotes = title => {
     }
 }
 
+//reading a note
+const readNotes = title => {
+    const notes = loadNotes();
+    const note = notes.find(note => note.title === title);
+
+    if (note) {
+        console.log(chalk.inverse(note.title));
+        console.log(note.body);
+    } else {
+        console.log(chalk.red('OOPS! Note not found'));
+    }
+}
+
 //exporting
-module.exports = { listNotes: listNotes, addNotes: addNotes, removeNotes: removeNotes };
+module.exports = { listNotes: listNotes, addNotes: addNotes, removeNotes: removeNotes, readNotes: readNotes };
