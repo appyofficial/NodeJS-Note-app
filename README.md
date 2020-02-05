@@ -1,28 +1,56 @@
-# Note app
-A simple note app made with pure node js using filesystem, yargs and chalk modules.
+# Note app | Node.JS
 
-Commands:<br/>
-<br/>
-  <strong> app.js add     Add a note.</strong><br/>
-  For example:
-  To add a note, write a command node app.js add --title="Hello" --body="This is my note"
-  <br/>
-  <br/>
-  <strong>app.js remove  Removing a note.</strong><br/>
-  For example:
-  To remove a note, write a command node app.js remove --title="Hello"
-  <br/>
-  <br/>
-  <strong>app.js list    Listing all notes.</strong><br/>
-  For example:
-  To list all notes, write a command node app.js list
-  <br/>
-  <br/>
-  <strong>app.js read    Reading notes</strong><br/>
-  For example:
-  To read a note, write a command node app.js add --title="Hello"
-<br/>
-<br/>
-Options:<br/>
-  --help     Show help <br/>                                              
+Made with pure node.js with the help of command line args, chalk and file system modules to read, write, update a json file.
+
+## Command Lines
+
+Following are the command lines you can use to update notes:
+
+```bash
+Commands:
+  app.js add     Add a note.
+  app.js remove  Removing a note.
+  app.js list    Listing all notes.
+  app.js read    Reading notes
+
+Options:
+  --help     Show help 
   --version  Show version number  
+```
+
+## Usage
+
+### Adding a note
+
+Takes two arguments, body and title.
+```javascript
+node app.js add --title="Hello" --body="This is my note"
+```
+
+### Removing a note
+
+Takes one argument, title.
+```javascript
+node app.js remove --title="Hello"
+```
+
+### Listing all the notes
+
+Takes no arguments
+```javascript
+node app.js list
+```
+
+### Reading a note
+
+Takes one argument, title.
+```javascript
+node app.js add --title="Hello"
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+[Contact me](https://www.appysharma.com)  
