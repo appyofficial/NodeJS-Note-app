@@ -1,6 +1,5 @@
-function notes() {
-    let mywords = "Your notes...";
-    return mywords;
-}
+const getNotes = function () { return notes };
 
-module.exports = notes;
+const addNotes = function (title, body) { };
+
+module.exports = { getNotes, addNotes };

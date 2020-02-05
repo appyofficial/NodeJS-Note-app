@@ -1,15 +1,29 @@
 const fs = require('fs');
-const mynote = require('./note');
+const note = require('./note');
 const yargs = require('yargs');
 
+//Config
 yargs.version('1.0.1');
 
 //Add
 yargs.command({
     command: "add",
     describe: "Add a note.",
-    handler: function () {
-        console.log("Adding note.");
+    builder: {
+        title: {
+            describe: "Note title",
+            demandOption: true,
+            type: String
+        },
+        body: {
+            describe: "Note body",
+            demandOption: true,
+            type: String
+        }
+    },
+    handler: function (argv) {
+        console.log(argv.title);
+        console.log(argv.body);
     }
 });
 
@@ -40,7 +54,8 @@ yargs.command({
     }
 });
 
-console.log(yargs.argv);
+yargs.parse();
+//console.log(yargs.argv);
 
 
 
