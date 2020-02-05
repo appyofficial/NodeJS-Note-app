@@ -1,5 +1,5 @@
 const fs = require('fs');
-const note = require('./note');
+const notes = require('./note');
 const yargs = require('yargs');
 
 //Config
@@ -22,8 +22,7 @@ yargs.command({
         }
     },
     handler: function (argv) {
-        console.log(argv.title);
-        console.log(argv.body);
+        notes.getNotes(argv.title, argv.body);
     }
 });
 
