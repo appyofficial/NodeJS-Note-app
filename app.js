@@ -47,7 +47,7 @@ yargs.command({
     command: "list",
     describe: "Listing all notes.",
     handler() {
-        console.log("Listing all the notes.");
+        notes.listNotes();
     }
 });
 
@@ -55,21 +55,16 @@ yargs.command({
 yargs.command({
     command: "read",
     describe: "Reading notes",
+    builder: {
+        title: {
+            describe: "Note title",
+            demandOption: true,
+            type: String
+        }
+    },
     handler() {
         console.log("Reading all the notes.");
     }
 });
 
 yargs.parse();
-//console.log(yargs.argv);
-
-
-
-
-
-
-//fs.writeFileSync('notes.txt', 'The note which you want to write');
-//fs.appendFileSync('notes.txt', ', This is an extra text');
-//console.log(mynote());
-//const command = process.argv[2];
-
